@@ -1,5 +1,5 @@
 # main.py
-
+from termcolor import colored
 from pet_shelter import PetShelter
 from utils import add_pet_from_input, display_menu, update_pet, delete_pet, save_to_file, load_from_file
 
@@ -13,7 +13,7 @@ if __name__ == "__main__":
         if choice == '1':
             pet = add_pet_from_input()
             shelter.add_pet(pet)
-            print("Pet added.")
+            print(colored("Pet added.", "green"))
         elif choice == '2':
             print("\nCurrent Inventory:")
             shelter.display_inventory()
@@ -26,7 +26,8 @@ if __name__ == "__main__":
         elif choice == '6':
             load_from_file(shelter)
         elif choice == '7':
-            print("Exiting the program.")
+            print(colored("Exiting the program.","cyan"))
             break
         else:
-            print("Invalid choice, please try again.")
+            print(colored("Invalid choice, please try again.","red"))
+

@@ -1,5 +1,5 @@
 # utils.py
-
+from termcolor import colored
 import json
 from pet_shelter import Pet
 
@@ -13,14 +13,14 @@ def add_pet_from_input():
     return pet
 
 def display_menu():
-    print("\n--- Pet Shelter Menu ---")
+    print(colored("\n--- Pet Shelter Menu ---", attrs=["bold"]))
     print("1. Add Pet")
     print("2. View Pets")
     print("3. Update Pet")
     print("4. Delete Pet")
     print("5. Save to File")
     print("6. Load from File")
-    print("7. Exit")
+    print(colored("7. Exit","red"))
 
 def update_pet(shelter):
     pet_name = input("Enter the name of the pet to update: ")
